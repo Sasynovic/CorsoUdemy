@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        Il tag form viene utilizzare, insieme ad altri tag, per far interagire l'utente con la pagina inserendo ad esempio dati.
+        Affinche' un form funzioni corretamente e' necessario integrarlo con altri linguaggi di programmazione.
+
+        L'attributo action viene utilizzato per collegare al form un URL che nel momento in cui viene inviato il form elabora i dati
+        inseriti dall'utente
+        
+        L'attributo method serve per definire il modo in cui i nostri dati verrano elaborati.
+            1. Con GET, che e' considerato il valore di default, inserisce alla fine dei campi un punto interrogativo che serve all'attributo
+                action per riconoscere i valori inseriti nei campi
+            2. Con POST, fa si che l'elaborazione avvenga direttamente a livello HTTP, dunque i dati inseriti si limiteranno ad essere analizzati
+                all'interno della pagina web attuale
+    -->
+    <form action="send.php?name1=val&surname1=val2" method="post">
+
+            <!--Il tag label serve a specificare un etichetta-->   
+            <label for="name">Name</label><br>
+            <!--
+                Il tag input al suo interno presenta degli attributi specifici che vanno a definire il tipo di input che il nostro tag sta ricevendo.
+            -->
+                <input type="text" name="name"><br>
+
+            <label for="password">Password</label><br>
+                <input type="password" name="password"><br>
+
+            <input type="submit"><br><br>
+            <!--
+                La differenza tra radio e checkbox e' che due radio con lo stesso nome possono ammettere una sola scelta
+            -->
+            <label for="test1">Check</label><br>
+            
+                <input type="checkbox" name="test1" value="1">
+            <label for="test1">Checkbox 1</label><br>
+                <input type="checkbox" name="test1" value="2">
+            <label for="test1">Checkbox 2</label><br><br>
+
+            
+            <input type="radio" name="test" value="1">
+            <input type="radio" name="test" value="2"><br><br>
+            
+            <input type="date"><br><br>
+            <input type="email"><br><br>
+            <input type="file"><br><br>
+            <input type="reset"><br><br>
+    </form>
+</body>
+</html>
