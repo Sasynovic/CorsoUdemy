@@ -21,15 +21,18 @@
     -->
     <form action="send.php?name1=val&surname1=val2" method="post">
 
+        <fieldset>
+                <legend>Form</legend>
+
             <!--Il tag label serve a specificare un etichetta-->   
             <label for="name">Name</label><br>
             <!--
                 Il tag input al suo interno presenta degli attributi specifici che vanno a definire il tipo di input che il nostro tag sta ricevendo.
             -->
-                <input type="text" name="name"><br>
+                <input type="text" name="name" value="Mark" readonly><br>
 
             <label for="password">Password</label><br>
-                <input type="password" name="password"><br>
+                <input type="password" name="password" value="password" disabled><br>
 
             <input type="submit"><br><br>
             <!--
@@ -47,22 +50,32 @@
                 Se vogliamo fare in modo che si possano scegliere piu' opzione doppiano inserire nel tag l'attributo multiple.
             -->
             <label for="list">Dropdown</label><br>
+            
             <select name="list">
                 <option value="opt1">Option 1</option>
                 <option value="opt2">Option 2</option>
                 <option value="opt3">Option 3</option>
             </select><br><br>
 
-            <label for="textarea"></label>
-            <textarea name="message" id=""></textarea>
+            <label for="message">Message</label><br>
+                <textarea name="message" rows="10" cols="50" maxlength="10">Text...</textarea><br><br>
             
             <input type="radio" name="test" value="1">
             <input type="radio" name="test" value="2"><br><br>
             
             <input type="date"><br><br>
-            <input type="email"><br><br>
+            <input type="email" required><br><br>
             <input type="file"><br><br>
             <input type="reset"><br><br>
+            <input list="color" name="colors">
+
+            <datalist id="color">
+                <option value="red">
+                <option value="green">
+                <option value="blue">
+            </datalist>
+
+        </fieldset>
     </form>
 </body>
 </html>
