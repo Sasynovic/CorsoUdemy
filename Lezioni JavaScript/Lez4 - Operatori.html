@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operatori js</title>
+</head>
+<body>
+    <div id="y"></div><br>
+    <div id="x"></div><br>
+    <div id="z"></div><br>
+    <div id="k"></div><br>
+    <div id="i"></div><br>
+    <div id="h"></div><br>
+
+    <script>
+        x = 10;
+        y = x;
+
+        /*
+            Possiamo concatenare piu' stringhe sommandole
+        */
+        z = 'Hello';
+        z += 'World';
+
+        x += 2;
+        x -= 2;
+        x **=5;
+        x /= 2;
+        x *= 3;
+        x %= 7;
+
+        k = x == y;
+        k = x != y;
+
+        /*
+            Stesso valore e stessa tipologia di dato
+        */
+        k = x === y;
+
+        k = x > y;
+        k = x < y;
+
+        f = 3+2;
+        e = 3-2;
+        g = 3*2;
+
+        /*
+            Arrotondamento semplice
+            Arrotondamento per difetto
+            Arrotondametno per eccesso
+            Qualsiasi valore oltre la virgola viene troncato
+
+            La differenza tra floor e trunc la si ha con i numeri negativi. Ad esempio con il valore -4.1 trunc ci restituisce -4 mentre floor -5. Fosse stato 4.1 entrambi avrebbero restituito 4
+        */
+
+        h = Math.round(3/2);
+        h = Math.ceil(3/2);
+        h = Math.floor(3/2);
+        h = Math.trunc(3/2);
+        i=(f + e)*(g-h);
+
+        /*
+            Resto della divisione
+        */
+        l = f%e;
+
+        /*
+            Incremento del valore
+        */
+        f = f++;     
+
+        document.getElementById('x').innerHTML = x;
+        document.getElementById('y').innerHTML = y;
+        document.getElementById('z').innerHTML = z;
+        document.getElementById('k').innerHTML = k;
+        document.getElementById('h').innerHTML = h;
+        document.getElementById('i').innerHTML = i;
+    </script> 
+</body>
+</html>
