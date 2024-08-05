@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="Start"></div>
+
+    <!--
+        Manda un messagio a schermo appena si apre la pagina
+    -->
+    <script type="text/javascript">
+       /*
+        Manda un messagio a schermo appena si apre la pagina
+        */
+        alert("Hello World");
+        
+        //case sensitive. 
+        //Non è necessario istanziare le variabili. Possiamo effettuare l'istanza direttamente con il valore che ci serve
+        //
+        var varone;
+        var vartwo;
+        var vartree;
+        var varBool;
+
+        varone = "Hello";
+        vartwo = 10;
+        vartree = 50;
+        vartree = vartwo + vartree;
+        varBool = FALSE;
+
+        /*
+            Con il seguente comando stiamo dicendo ... tutti gli elemtni che hanno come id quello specificato
+            mostrino a schermo il messaggio indicato
+        */
+        document.getElementById("Start").innerHTML = varone + " , " + vartree;
+
+        /*
+            DOM = Document Object Model
+            sono utilizzate per inserire elemtenti interattivi in un pagina
+        */
+    </script>
+
+</body>
+</html>
