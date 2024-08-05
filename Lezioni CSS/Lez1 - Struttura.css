@@ -1,0 +1,43 @@
+body {
+
+}
+
+p span{
+    
+}
+
+p > span{
+    
+}
+
+p + span{
+    
+}
+
+p:first-child {
+    
+}
+
+p::after{
+
+}
+
+a[href*"google"] {
+
+}
+
+h1 {
+    
+}
+
+h2 {
+    
+}
+
+.class1 {
+
+}
+
+#id1 {
+
+}
