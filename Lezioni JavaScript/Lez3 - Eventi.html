@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventi js</title>
+</head>
+<body>    
+
+    <button onclick="document.getElementById('start').innerHTML = Date()">onclick</button>
+
+    <button onmouseover="document.getElementById('start').innerHTML = Date()">onmouseover</button>
+
+    <select onchange="document.getElementById('start').innerHTML = 'New Selection'">
+        <option value="One">One</option>
+        <option value="Two">Two</option>
+        <option value="Three">Three</option>
+    </select>
+
+
+   <div id="start"></div><br>
+   <div id="y"></div><br>
+   <div id="x"></div><br>
+   <div id="z"></div><br>
+
+    <script>
+        x = 10;
+        y = x;
+
+        z = 'Hello';
+        z += 'World';
+
+        x += 2;
+        x -= 2;
+        x **=5;
+        x /= 2;
+        x *= 3;
+        // x %= 2;
+        
+
+        document.getElementById('x').innerHTML = x;
+        document.getElementById('y').innerHTML = y;
+        document.getElementById('z').innerHTML = z;
+    </script> 
+    
+</body>
+</html>
