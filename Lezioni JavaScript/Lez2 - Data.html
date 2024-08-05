@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="data"></div>
+
+   
+    <script type="text/javascript">
+       
+        /*
+            E' possibile manipolare l'orario creando una variabile che lo recuperi e poi lavorando con i metodi disponibili
+        */
+
+        dateOne = new Date();
+        /*
+            ottieni la differenza rispetto al fuso orario utilizzato 
+        */
+        day = dateOne.getTimezoneOffset();
+        /*
+            imposta la data ad un valore indicato. Si possono variare tutti i valori di una data 
+        */
+        dateOne.setDate(20);
+        /*
+            conversione della data in stringa 
+        */
+        dataText = dateOne.toDateString();
+
+        /*
+          a partire da una variabile data recupera cio' che e' necessario  
+        */
+        day = dateOne.getDate();
+        month = dateOne.getMonth();
+        year = dateOne.getFullYear();
+        hours = dateOne.getHours();
+        minutes = dateOne.getMinutes();
+        seconds = dateOne.getSeconds();
+
+        document.getElementById("data").innerHTML= month + "/" + day + "/" + year + " " + hours+ ":" + minutes+ ":" + seconds;
+
+    </script>
+
+</body>
+</html>
