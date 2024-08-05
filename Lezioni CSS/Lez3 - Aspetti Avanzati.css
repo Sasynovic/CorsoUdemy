@@ -6,19 +6,21 @@ body{
     background: linear-gradient(90deg, green, white, red);
 }
 
+/*
+
 h1{
-    /*
+    
     border : 20px solid transparent;
     padding: 10px;
     border-image: url(../Documenti_Corso/Imamgini/estasio_ico.png) 20 round;
     -webkit-border-image: url(../Documenti_Corso/Imamgini/estasio_ico.png) 20 round;
     -moz-border-image: url(../Documenti_Corso/Imamgini/estasio_ico.png) 20 round;
     -o-border-image: url(../Documenti_Corso/Imamgini/estasio_ico.png) 20 round;
-    */
+    
     border : 2px solid black;
     padding: 10px;
     border-radius: 30px 10px 0px 10px;
-    /* ombreggiatura orizonatale , ombreggiatura verticale, sfocatura, diffusione , colore*/
+    /* ombreggiatura orizonatale , ombreggiatura verticale, sfocatura, diffusione , colore/
     box-shadow: 5px 10px 15px 15px #333;
     text-transform: lowercase;
     letter-spacing: 3px;
@@ -38,6 +40,15 @@ h1{
 @keyframes animone{
     from{top:0px;}
     to{top:400px;}
+}
+*/
+
+@media screen and (max-width:1024px){
+
+    body{
+        color: rgb(255, 255, 255);
+        background: linear-gradient(90deg, rgb(0, 51, 255), white, red);
+    }
 }
 
 a{
