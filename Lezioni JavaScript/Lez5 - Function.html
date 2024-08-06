@@ -37,6 +37,34 @@
 
         document.getElementById('start').innerHTML = y;
     </script>
+
+    <script>
+
+        /*
+            Funzioni arrows. Servono a semplificare le funzioni
+        */
+        var x = (x,y) => x*y;
+        var y = () => 'Hello World';
+
+        /*
+            parsing dei valori. ( conversione )
+            escape. ( codica tutte le sue componenti con codifica esadecimale e %, tranne alcuni caratteri)
+            econdeURI. ( codifica correttamente per gli indirzzi web )
+            */
+        var z = parseInt('5');
+        var es = escape("Zack è il mio bellissimo cane/Minù è il mio bellissimo gatto");
+        var url = encodeURI('https://www.google 1.it');
+
+
+        var r = x(5 , 4);
+        var c = y();
+
+        console.log(r);
+        console.log(c);
+        console.log(z);
+        console.log(es);
+        console.log(url);
+    </script>
     
 </body>
 </html>
