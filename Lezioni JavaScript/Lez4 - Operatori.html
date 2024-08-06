@@ -12,6 +12,7 @@
     <div id="k"></div><br>
     <div id="i"></div><br>
     <div id="h"></div><br>
+    <div id="ris"></div><br>
 
     <script>
         x = 10;
@@ -70,12 +71,20 @@
         */
         f = f++;     
 
+        tr = true;
+        fa = false;
+
+        ris = tr && fa;
+        ris = tr || fa;
+        ris = !tr;
+
         document.getElementById('x').innerHTML = x;
         document.getElementById('y').innerHTML = y;
         document.getElementById('z').innerHTML = z;
         document.getElementById('k').innerHTML = k;
         document.getElementById('h').innerHTML = h;
         document.getElementById('i').innerHTML = i;
+        document.getElementById('ris').innerHTML = ris;
     </script> 
 </body>
 </html>
