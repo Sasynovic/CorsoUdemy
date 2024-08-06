@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oggetti</title>
+</head>
+<body>
+    <script>
+
+        /*
+            Inserendo un asterisco vicino fuction creiamo un generatore. Inserendo i valori yield all'interno di essa
+            andiamo a definire degli step separati per la stessa fuznione
+        */
+        function* base(){
+            console.log('start1');
+            yield 'stop';
+            console.log('start2');
+            yield 'stop2';      
+            console.log('finish');      
+        }
+
+        const x = base();
+        const y = x.next();
+        console.log(y);
+
+        const z = x.next();
+        console.log(z);
+
+        const f = x.next();
+        console.log(f);
+    
+    </script>
+    
+</body>
+</html>
