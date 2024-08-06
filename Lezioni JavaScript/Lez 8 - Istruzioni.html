@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Istruzioni js</title>
+</head>
+<body>
+    <script>
+        var x= 10;
+        var y = 5;
+
+        if(x==5){
+            console.log('5');
+        }else if(x==(y+5)){
+            console.log('Valore if');
+        }else if(x==8){
+            console.log('8');
+        }else{
+            console.log(x);
+        }
+
+        switch (x - y){
+            case 1:
+                if(x==9){
+                    console.log(1);
+                    break;
+                }else{
+                    console.log(2);}
+                    break;
+            case 6:
+                console.log(5);
+                break
+            default:
+                console.log('Default '+x);
+        }
+    </script>
+</body>
+</html>
