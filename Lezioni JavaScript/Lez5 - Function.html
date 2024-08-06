@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+<body>
+
+    <div id="start"></div>
+    
+    <script>
+        var a= 10;
+        var b= 20;
+
+        var c='Number';
+        
+        var xa = 1;
+
+        // con let non è possibile in uno stesso scope ridichiarare la stessa variabile
+        let ya = 2;
+
+        // con const non è possibile a livello globale ridichiarare la funzione 
+        const za = 0;
+
+        function xyz(a = 10, b = 20){
+            var x = a*b;
+
+            function abc(){
+                return c + '-' + x;
+            }
+
+            return abc();
+        }
+
+        y = xyz();
+
+        document.getElementById('start').innerHTML = y;
+    </script>
+    
+</body>
+</html>
