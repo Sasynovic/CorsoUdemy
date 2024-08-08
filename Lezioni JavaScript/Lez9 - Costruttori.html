@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Costruttore js</title>
+</head>
+<body>
+    <script>
+
+        var y = { one : 1, two : 2};
+        var k = { three : 3, two : 4};
+
+        //dati più oggetti per ogni campo con lo stesso nome prende come valore l'ultimo oggetto
+        var z = Object.assign(y,k);
+
+        console.log(z);
+
+        function me(){
+            this.name = '';
+            this.surname = '';
+            this.work = function(){
+
+            }
+        }
+
+        me.prototype.surname = 'Horizon';
+
+        var x = new me();
+        x.name = 'Salvatore';
+        console.log(x);
+
+        var q = new me();
+        q.name = 'Michele';
+        console.log(q);
+
+        var o = 'Paul'.constructor;
+        var ob = typeof [1,2,3,4];
+
+        console.log(o);
+        console.log(ob);
+    </script>
+</body>
+</html>
