@@ -8,16 +8,13 @@
 <body>
     <div id="start"></div>
     <script>
-        var a = {
-            'name': 'Salvatore',
-            'surname': 'Barretta',
-            'job': 'Tecnico',
-        }
+
         var b = {
-            'name': 'Michele',
-            'surname': 'De Luca',
-            'job': 'Tecnico',
+            name: 'Michele',
+            surname: 'De Luca',
+            job: 'Tecnico',
         }
+
         function base(){
             this.name='';
             this.name='';
@@ -28,6 +25,35 @@
         me.name = 'Salvatore';
 
         document.getElementById('start').innerHTML=me;
+
+        var people1 = {
+            name: 'Salvatore',
+            surname: 'Barretta',
+            work :{
+                    company: 'Horizon',
+                    role: Tecnico
+                }
+            }
+        
+        people1.age = 21;
+
+        var name = people1.name;
+        var name = people1['name'];
+
+        function namesurname(){
+            return this.name + ' ' + this.surname;
+        }
+
+        people1.namesurname = namesurname;
+
+        var namesurname = people1.namesurname();
+        
+        var number = new Object(10);
+        var text = new Object('Text');
+
+        number.toString();
+        text.valueOf();
+        
     </script>
     
 </body>
