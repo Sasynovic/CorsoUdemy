@@ -53,6 +53,29 @@
 
         number.toString();
         text.valueOf();
+
+        var x = new Numero(20);
+        var y = Number.isFinite(x);
+        var z = Number.isInteger(10.1);
+
+        console.log(y);
+        console.log(z);
+
+        console.log(k);
+
+        if(x < Number.MAX_VALUE){
+            console.log('Ok');
+        }else if(x < Number.MIN_VALUE){
+            console.log('kO');
+        }
+
+
+        var k = new Object(19.2);
+        //il numero specifica il numero di decimali da visualizzare oltre il valore f
+        var j = k.toFixed(5);
+        var i = k.toExsponential();
+        //numero di cifre che voglio visualizare
+        var h = k.toPrecision(1);     
         
     </script>
     
