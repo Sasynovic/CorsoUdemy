@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Costruttore js</title>
+    <title>Costruttori e conversione di dati js</title>
 </head>
 <body>
     <script>
@@ -37,8 +37,24 @@
         var o = 'Paul'.constructor;
         var ob = typeof [1,2,3,4];
 
+        // conversione valore numero in string
+        var str = typeof String(10);
+        
+        /*
+        alcune conversioni sono automatiche
+            op1 = otteniamo una stringa
+            op2 ed op3 = otteniamo un valore numerico
+        */
+        var op1 = "10" + 5;
+        var op2 = "10" - 5;
+        var op3 = "10" * 5;
+
         console.log(o);
         console.log(ob);
+        console.log(str);
+        console.log(op1);
+        console.log(op2);
+        console.log(op3);
     </script>
 </body>
 </html>
