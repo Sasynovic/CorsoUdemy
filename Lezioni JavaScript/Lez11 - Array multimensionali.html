@@ -9,7 +9,29 @@
     
     <script>
         
+        var z = new Array();
 
+        z[0] = new Array();
+        z[1] = new Array();
+        z[2] = new Array();
+
+        z[0][0] = "Salvatore";
+        z[0][1] = "Michele";
+        z[0][2] = "Marco";
+
+        z[1][0] = "Rebecca";
+        z[1][1] = "Viviana";
+        z[1][2] = "Martina";
+
+        console.log(z[0]);
+        console.log(z[1]);
+
+        console.log(z[0][2]);
+
+        for(i=0; i<z[0].length; i++){
+            for(j=0; j<z[1].length; j++)
+                console.log(z[i][j]);
+        }
     </script>
 
 </body>

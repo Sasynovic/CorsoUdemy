@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //stampa di un array con foreach
+        var xTest = ["Salvatore", "Michele", "Maighl"];
+
+        for(i=0; i<xTest.length; i++){
+            console.log(xTest[i]);
+        }
+
+        function start(i, index){
+            console.log(i + ' / ' + index);
+        }
+
+        xTest.forEach(start);
+
+        //ricerca di un elemento in un array. Viene restituita la posizione. Se non presente viene restituito -1
+        var ric = xTest.indexOf("Michele");
+        console.log(ric);
+
+        //ricera di un elemento con restituzione di quest'ultimo se presente
+        var find = xTest.find(ric1);
+
+        function ric1(value, index, array){
+            return value == "Michele";
+        }
+
+        console.log(find);
+
+        //restituisce posizione dell'elemento che ci interessa in base al valore inserito nella funzione
+        var ricerca = xTest.findIndex(ric1)
+        console.log(ricerca);
+
+        
+    </script>
+</body>
+</html>
