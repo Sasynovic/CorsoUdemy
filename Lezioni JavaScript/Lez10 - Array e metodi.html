@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array e metodi js</title>
+</head>
+<body>
+
+    <script>
+        
+        var y = ["Salvatore", " Giovanni"];
+        y[2] = "Michele";
+        y[3] = "Luca";        
+
+        /*
+            Push inserimento in testa
+            Unshift aggiunta in coda
+
+            Pop rimozione in testa
+            Shift rimozione in coda
+
+            associando una variabile ad una di queste operazione sull'array ottieniamo assgnato alla variabile il valore su cui stiamo operando
+        */
+        y.push("Marco");
+        y.unshift("Maighl");
+        y.pop();
+        y.shift();
+
+        console.log(y);
+
+        // inseriscimi in posizione x il seguente valore e rimuovimi gli y elementi che lo seguono
+        var z = y.splice(1,2,"Stephany");
+
+        // estraiamo gli elementi dell'array compresi tra i due valori
+        var j = y.slice(1,2);
+
+        console.log(z);
+        console.log(y);
+        console.log(j);
+
+        var x = new Array();
+        x[0]="Jhonny";
+        x[1]= y[2];
+
+        console.log(x);
+
+        // definiamo la lunghezza dell'array per avere un riferimento sul numero dei campi disponibili nell'array
+        x.length = 3;
+
+        //concatenazione di piu' array
+        var array1 = ["Computer","Tastiera","Mouse","SSD"];
+        var array2 = ["Sedia","Tavolo","Forchetta"];
+
+        var concat = array1.concat(array2);
+
+        console.log(concat);
+
+        //inverte l'ordine delle posizione nell'array
+        var rev = concat.reverse();
+        console.log(rev);
+
+        // con sort ordiniamo l'array
+        var array4 = [1,10,3,4,20,19];
+
+        var sort = array4.sort();
+        console.log(array4);
+        console.log(sort);
+  
+        // inserendo tra l'array e reverse sort andiamo ad ordinare in maniera descresente l'array
+        var de = array4.sort().reverse();
+        console.log(de);
+
+        // convertire array in string
+        var join = concat.join();
+        console.log(join);
+    </script>
+    
+</body>
+</html>
