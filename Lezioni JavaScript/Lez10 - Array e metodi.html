@@ -74,6 +74,20 @@
         // convertire array in string
         var join = concat.join();
         console.log(join);
+
+        //stampa di un array con foreach
+        var xTest = ["Salvatore", "Michele", "Maighl"];
+
+        for(i=0; i<xTest.length; i++){
+            console.log(xTest[i]);
+        }
+
+        function start(i, index){
+            console.log(i + ' / ' + index);
+        }
+
+        xTest.forEach(start);
+        
     </script>
     
 </body>
