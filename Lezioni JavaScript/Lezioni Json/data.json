@@ -1,0 +1,29 @@
+{
+    "people" :
+        [
+            {
+                "name":"Salvatore",
+                "cognome": "Barretta",
+                "work":["Primo Livello", "Help Desk"],
+                "age":21
+            },
+            {
+                "name":"Michele",
+                "cognome": "De Luca",
+                "work":{"role": "manager", "s_age":3},
+                "age":21
+            },
+            {
+                "name":"Giovanni",
+                "cognome": "Bruno",
+                "work":"Sviluppatore",
+                "age":26
+            },
+            {
+                "name":"Marco",
+                "cognome": "Cancelliere",
+                "work":"Sviluppatore",
+                "age":23
+        }
+        ]
+}

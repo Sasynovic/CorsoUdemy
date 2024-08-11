@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json 1</title>
+</head>
+<body>
+    
+    <div id="start"></div><br>
+    <div id="start_one"></div><br>
+    <div id="start_two"></div><br>
+    <div id="start_three"></div><br>
+    <div id="start_four"></div><br>
+    <div id="start_five"></div><br>
+    <div id="start_six"></div>
+
+    <script>
+
+        
+        z = {"name":"Michele", "cognome": "De Luca", "work":{"role": "manager", "s_age":3}, "age":21};
+        x = '{"name":"Salvatore", "cognome": "Barretta", "work":["Primo Livello", "Help Desk"], "age":21}';
+        x1 = {"name":"Salvatore", "date" : new Date(), "age":35};
+        
+
+        k = z.work[1];
+        k = z.work.role;
+    
+        y = JSON.parse(x);
+        f = JSON.stringify(x1);
+
+        document.getElementById('start_one').innerHTML = y.name;
+        document.getElementById('start_two').innerHTML = f;
+
+        // recupero dati da file json
+        fetch('data.json')
+        .then(response => response.text())
+            .then(text =>{
+                try{
+                const x = JSON.parse(text);
+                document.getElementById('start').innerHTML = x.people[1].name;
+            }catch(err){
+                console.log(error);
+                }
+            }
+        )
+
+        x2 = {"Name":"Salvatore", "Surname" : "Barretta", "Age":21};
+
+        for(i in x2){
+            document.getElementById('start_three').innerHTML += i;
+        }
+        for(i in x2){
+            document.getElementById('start_four').innerHTML += x2[i];
+        }
+        for(i in x2){
+            document.getElementById('start_five').innerHTML += i + ':' + x2[i] +'<br/>';
+        }
+
+        x3 = {"name":"Michele", "cognome": "De Luca", "work":['manager','developer'], "age":21};
+        x4 = '';
+
+        for(i in x3.work){
+            x4 += x3.work[i] + '<br/>'
+        }
+
+        document.getElementById('start_six').innerHTML = x4;
+        
+    </script>
+
+</body>
+</html>
