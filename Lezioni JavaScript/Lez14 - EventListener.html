@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listener js</title>
+</head>
+<body>
+
+    <div id="start1">
+        <div id="last">Piano Inclinato</div>
+        <div class="last2">Piano rettilineo</div>
+        <a href="https://www.google.com" target="_blank">google</a>
+    </div>
+    
+    <br><div id="start">Start One</div>
+    <button id="click">Click</button>
+    <button onclick="remove()" id="click">Remove !</button>
+
+    <script>
+        // document.getElementById('click').addEventListener('click',one);
+        x = document.getElementById('click');
+        x.addEventListener('click',one);
+
+        y = document.getElementById('start');
+        y.addEventListener('mouseover',two); 
+        y.addEventListener('mouseout', three);
+
+        function one(){
+            document.getElementById('start').innerHTML = 'Start New';
+        }
+        function two(){
+            document.getElementById('start').innerHTML = 'Start Two';
+        }
+        function three(){
+            document.getElementById('start').innerHTML = 'Start Three';
+        }
+        
+        function remove(){
+            document.getElementById('start').removeEventListener("mouseover",two);
+            document.getElementById('start').removeEventListener("mouseout",three);
+        }
+
+        // possiamo intendere anche il tutto come un array. Se creaiamo un query selector associato ad una variabile che punta ad un tag generico possiamo poi richiarmalo piu' volte come se fosse un array 'a[0].style.color = "red";'
+        document.querySelector('.last2').style.color = 'red';
+        document.querySelector('a[target]').style.color = 'purple';
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document js</title>
+</head>
+<body>
+    
+    <div id="start"></div>
+
+    <div name="start">Start One</div>
+    <div class="start">Start Two</div>
+
+    <ul>
+        <li>One Start</li>
+        <li>Two Start</li>
+    </ul>
+    <ul>
+        <li>Three Start</li>
+        <li>Four Start</li>
+    </ul>
+
+    <p>Paragrafo 1</p>
+    <p>Paragrafo 2</p>
+    <div id="start_four">Start Six</div>
+    <div id="start_three"></div>
+    <div id="start_two"></div><br>
+    
+
+    <button onclick="one()">Button1</button>
+    <button onclick="two()">Button2</button>
+    <button onclick="three()">Button3</button>
+    <button onclick="four()">Button4</button>
+    <button onclick="five()">Button5</button>
+    <button onclick="remove()">Remove Button</button>
+    <button onclick="replace()">Replace Button</button><br><br>
+
+    <script>
+        // con document si intende tutta la nostra pagine web. Con get element by id stiamo dicendo di sostituire all'id la funzione indicata
+        document.getElementById('start').innerHTML = document.title;
+
+        //possiamo sostituire alcuni elementi hhtml o css tramite document
+        document.getElementById('start').id = 'start_one';
+        document.getElementById('start_one').innerHTML = 'Hello World';
+
+        function one() {
+            x = document.getElementsByClassName('start');
+            x[0].innerHTML = 'Hello World';
+        }
+        function two() {
+            x = document.getElementsByName('start');
+            x[0].innerHTML = 'Hello World';
+        }
+        function three() {
+            x = document.getElementsByTagName('ul')[0];
+            x.getElementsByTagName('li')[1].innerHTML = 'Hello World';
+        }
+
+        // in questo caso abbiamo inserito due volte la dicitura innerHTML poiche' la proprieta' all'interno di item e' presente un oggetto che se non dichiarato non viene rappresentato correttamente
+        function four() {
+            x = document.getElementsByTagName('p');
+            //document.getElementById('start_two').innerHTML = x.item(0).innerHTML;
+            document.getElementById('start_two').innerHTML = 'I paragrafi presenti sono:\t' + x.length;
+        }
+
+        function five(){
+            x = document.createElement('p');
+            x.innerHTML = "Start Three";
+            document.getElementById('start_three').appendChild(x);
+        }
+
+        function replace(){
+            y = document.createElement('p');
+            y.innerHTML = "Start Five";
+            document.getElementById('start_three').replaceChild(y, x);
+        }
+
+        function remove(){
+            document.getElementById('start_three').removeChild(x);
+        }
+
+        document.write(Date());
+
+        document.body.style.backgroundColor = 'pink';
+        document.getElementById('start_four').style.color = 'white';
+    </script>
+    
+</body>
+</html>
